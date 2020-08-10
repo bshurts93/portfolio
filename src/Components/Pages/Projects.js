@@ -1,7 +1,7 @@
 import React from "react";
-import Thumbnail from "../../Thumbnail";
+import Thumbnail from "../Display/Thumbnail";
 
-function Projects(props) {
+function Projects() {
   return (
     <div>
       <h1>Projects</h1>

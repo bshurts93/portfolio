@@ -1,6 +1,6 @@
 import React from "react"; // Import the Component component from React
 import { Link } from "react-router-dom"; // Import the Link component
-import "./App.css";
+import "../../App.css";
 
 function Thumbnail(props) {
   return (
