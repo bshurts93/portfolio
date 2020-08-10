@@ -3,11 +3,10 @@ import Landing from "./Components/Pages/Landing";
 import Projects from "./Components/Pages/Projects";
 import Education from "./Components/Pages/Education";
 import About from "./Components/Pages/About";
-import Navbar from "./Components/Navigation/Navbar";
 import NavMenu from "./Components/Navigation/NavMenu";
+import TopBar from "./Components/Navigation/TopBar";
 import { BrowserRouter, Route } from "react-router-dom";
 // Material UI Components
-import Button from "@material-ui/core/Button";
 
 import "./App.css";
 
@@ -25,14 +24,12 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Button variant="outlined" color="primary" onClick={this.toggleMenu}>
-            Open full-screen dialog
-          </Button>
-          <Navbar />
+          <TopBar toggleMenu={this.toggleMenu} />
           <NavMenu
             isOpen={this.state.isMenuOpen}
             toggleMenu={this.toggleMenu}
           />
+
           {/* Route Setup */}
           <Route exact path="/" component={Landing} />
           <Route path="/projects" component={Projects} />
